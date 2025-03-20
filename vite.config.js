@@ -5,13 +5,13 @@ export default defineConfig({
   plugins: [react()],
   server: {
     port: 8080,
-    host: '0.0.0.0', // Ensure it is accessible externally
-    strictPort: true, // Ensures no other port is used
+    host: '0.0.0.0',
+    strictPort: true,
   },
   preview: {
     port: 8080,
     host: '0.0.0.0',
     strictPort: true,
-    allowedHosts: 'all', // Allow all hosts to access it
+    allowedHosts: true, // Allow all hosts
   },
 })
