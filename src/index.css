@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  color: #1c3738;
+  font-family: "Raleway", sans-serif;
+}
+.aboutus {
+  border: 1.5px solid #1c3738;
+  transition: all 0.4s ease-out;
+}
+.aboutus:hover > h1 {
+  font-weight: 800;
+  color: #1c3738;
+}
+
+input::placeholder {
+  font-size: 1vw;
+}
+
+.tweetbar {
+  height: min-content;
+}
+.sentimentbar {
+  height: min-content;
+}
+.tweetbar h1,
+.sentimentbar h1 {
+  text-wrap: pretty;
+}
+
+
+.loader {
+  width: 64px; /* Increased from 44.8px */
+  height: 64px; /* Increased from 44.8px */
+  color: #FACF2E;
+  position: relative;
+}
+
+.loader:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: radial-gradient(14.4px at bottom right, #0000 94%, currentColor)
+      top left,
+    radial-gradient(14.4px at bottom left, #0000 94%, currentColor) top right,
+    radial-gradient(14.4px at top right, #0000 94%, currentColor) bottom left,
+    radial-gradient(14.4px at top left, #0000 94%, currentColor) bottom right;
+  background-size: 32px 32px; /* Increased from 22.4px */
+  background-repeat: no-repeat;
+  animation: loader 1.5s infinite cubic-bezier(0.3, 1, 0, 1);
+}
+
+@keyframes loader {
+  33% {
+    inset: -16px; /* Adjusted for new size */
+    transform: rotate(0deg);
+  }
+
+  66% {
+    inset: -16px; /* Adjusted for new size */
+    transform: rotate(90deg);
+  }
+
+  100% {
+    inset: 0;
+    transform: rotate(90deg);
+  }
+}
+
+.abouttext h4{
+  text-wrap: pretty;
+}
